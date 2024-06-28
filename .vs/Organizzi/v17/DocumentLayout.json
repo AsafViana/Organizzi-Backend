@@ -1,12 +1,139 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\views\\servicos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:views\\servicos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\controllers\\servicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:controllers\\servicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\models\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:models\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\models\\servicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:models\\servicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|c:\\users\\asaf\\desktop\\dev\\asp.net\\organizzi\\controllers\\pscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA67053-0FF7-4873-A4D9-2B17CFE4FEDD}|Organizzi.csproj|solutionrelative:controllers\\pscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Views\\Servicos\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Servicos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Views\\Servicos\\Create.cshtml",
+              "RelativeToolTip": "Views\\Servicos\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T03:30:21.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServicosController.cs",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Controllers\\ServicosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServicosController.cs",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Controllers\\ServicosController.cs",
+              "RelativeToolTip": "Controllers\\ServicosController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T03:23:59.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-28T03:11:16.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T02:59:42.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Models\\Context.cs",
+              "RelativeDocumentMoniker": "Models\\Context.cs",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Models\\Context.cs",
+              "RelativeToolTip": "Models\\Context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T02:55:54.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Servicos.cs",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Models\\Servicos.cs",
+              "RelativeDocumentMoniker": "Models\\Servicos.cs",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Models\\Servicos.cs",
+              "RelativeToolTip": "Models\\Servicos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T02:49:49.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PSController.cs",
+              "DocumentMoniker": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Controllers\\PSController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PSController.cs",
+              "ToolTip": "C:\\Users\\Asaf\\Desktop\\Dev\\Asp.Net\\Organizzi\\Controllers\\PSController.cs",
+              "RelativeToolTip": "Controllers\\PSController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T22:30:58.751Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
