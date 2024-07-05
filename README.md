@@ -30,36 +30,14 @@ Organizzi é um servidor ASP.NET que permite aos clientes divulgarem seus servi�
     Em um novo terminal, execute o seguinte comando para aplicar as migrações do Entity Framework:
 
     ```bash
-    docker-compose exec api dotnet ef database update
+    docker-compose exec web dotnet ef database update
     ```
 
 4. **Acessar a aplicação**
 
-    Acesse a aplicação em `http://localhost:80`.
+    Acesse a aplicação em `http://localhost:5000`.
 
-### Configuração do Docker Compose
+Pronto! Agora sua aplicação Organizzi deve estar rodando em um container Docker com um banco de dados SQL Server configurado.
 
-Aqui está a configuração do `docker-compose.yml` usada neste projeto:
-
-```yaml
-version: '3.9'
-
-services:
-  sql-service-db:
-    container_name: sql-veniti
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    ports: 
-      - "1433:1433"
-    environment:
-      SA_PASSWORD: "Q!w2e3r4"
-      ACCEPT_EULA: "Y"
-    restart: always
-
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "80:80"
-    depends_on:
-      - sql-service-db
+## Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
