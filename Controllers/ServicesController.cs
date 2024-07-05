@@ -9,22 +9,22 @@ using Organizzi.Models;
 
 namespace Organizzi.Controllers
 {
-    public class ServicosController : Controller
+    public class ServicesController : Controller
     {
         private readonly Context _context;
 
-        public ServicosController(Context context)
+        public ServicesController(Context context)
         {
             _context = context;
         }
 
-        // GET: Servicos
+        // GET: Services
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Servicos.ToListAsync());
+            return View(await _context.Services.ToListAsync());
         }
 
-        // GET: Servicos/Details/5
+        // GET: Services/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace Organizzi.Controllers
                 return NotFound();
             }
 
-            var servicos = await _context.Servicos
+            var services = await _context.Services
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (servicos == null)
+            if (services == null)
             {
                 return NotFound();
             }
 
-            return View(servicos);
+            return View(services);
         }
 
-        // GET: Servicos/Create
+        // GET: Services/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Servicos/Create
+        // POST: Services/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Nome,Tempo,ListaMateriais,Descricao")] Servicos servicos)
+        public async Task<IActionResult> Create([Bind("ID,Name,Time,MaterialList,Description")] Services services)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(servicos);
+                _context.Add(services);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(servicos);
+            return View(services);
         }
 
-        // GET: Servicos/Edit/5
+        // GET: Services/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +72,22 @@ namespace Organizzi.Controllers
                 return NotFound();
             }
 
-            var servicos = await _context.Servicos.FindAsync(id);
-            if (servicos == null)
+            var services = await _context.Services.FindAsync(id);
+            if (services == null)
             {
                 return NotFound();
             }
-            return View(servicos);
+            return View(services);
         }
 
-        // POST: Servicos/Edit/5
+        // POST: Services/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Nome,Tempo,ListaMateriais,Descricao")] Servicos servicos)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Time,MaterialList,Description")] Services services)
         {
-            if (id != servicos.ID)
+            if (id != services.ID)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace Organizzi.Controllers
             {
                 try
                 {
-                    _context.Update(servicos);
+                    _context.Update(services);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ServicosExists(servicos.ID))
+                    if (!ServicesExists(services.ID))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace Organizzi.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(servicos);
+            return View(services);
         }
 
-        // GET: Servicos/Delete/5
+        // GET: Services/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,34 +123,34 @@ namespace Organizzi.Controllers
                 return NotFound();
             }
 
-            var servicos = await _context.Servicos
+            var services = await _context.Services
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (servicos == null)
+            if (services == null)
             {
                 return NotFound();
             }
 
-            return View(servicos);
+            return View(services);
         }
 
-        // POST: Servicos/Delete/5
+        // POST: Services/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var servicos = await _context.Servicos.FindAsync(id);
-            if (servicos != null)
+            var services = await _context.Services.FindAsync(id);
+            if (services != null)
             {
-                _context.Servicos.Remove(servicos);
+                _context.Services.Remove(services);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ServicosExists(int id)
+        private bool ServicesExists(int id)
         {
-            return _context.Servicos.Any(e => e.ID == id);
+            return _context.Services.Any(e => e.ID == id);
         }
     }
 }

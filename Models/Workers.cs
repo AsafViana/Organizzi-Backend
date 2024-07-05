@@ -3,19 +3,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Organizzi.Models
 {
-    [Table("Servico")]
-    public class Servicos
+    [Table("Workers")]
+    public class Workers
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+
         [Required]
-        public string Nome { get; set; }
+        public string Name { get; set; }
+
         [Required]
-        public int Tempo { get; set; }
+        public List<int> LocationsList { get; set; }
+
         [Required]
-        public List<int> ListaMateriais { get; set; }
+        public List<int> ServicesList { get; set; }
+
         [Required]
-        public string Descricao { get; set; }
+        public string Level {  get; set; }
+
+        [Required]
+        public int LoginID { get; set; }
     }
 }

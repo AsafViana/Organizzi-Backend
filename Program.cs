@@ -8,8 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Database settings
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentNullException("DataBase connection string is null.");
-builder.Services.AddDbContext<Context>(options => 
-    options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<Context>(options =>
+    options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
