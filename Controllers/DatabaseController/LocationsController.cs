@@ -7,24 +7,24 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Organizzi.Models;
 
-namespace Organizzi.Controllers
+namespace Organizzi.Controllers.DatabaseController
 {
-    public class ServicesController : Controller
+    public class LocationsController : Controller
     {
         private readonly Context _context;
 
-        public ServicesController(Context context)
+        public LocationsController(Context context)
         {
             _context = context;
         }
 
-        // GET: Services
+        // GET: Locations
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Services.ToListAsync());
+            return View(await _context.Locations.ToListAsync());
         }
 
-        // GET: Services/Details/5
+        // GET: Locations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace Organizzi.Controllers
                 return NotFound();
             }
 
-            var services = await _context.Services
+            var locations = await _context.Locations
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (services == null)
+            if (locations == null)
             {
                 return NotFound();
             }
 
-            return View(services);
+            return View(locations);
         }
 
-        // GET: Services/Create
+        // GET: Locations/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Services/Create
+        // POST: Locations/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Time,MaterialList,Description")] Services services)
+        public async Task<IActionResult> Create([Bind("ID,Street,Neigbourhood,Number,City,State,Country,PostalCode,ServicesList")] Locations locations)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(services);
+                _context.Add(locations);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(services);
+            return View(locations);
         }
 
-        // GET: Services/Edit/5
+        // GET: Locations/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +72,22 @@ namespace Organizzi.Controllers
                 return NotFound();
             }
 
-            var services = await _context.Services.FindAsync(id);
-            if (services == null)
+            var locations = await _context.Locations.FindAsync(id);
+            if (locations == null)
             {
                 return NotFound();
             }
-            return View(services);
+            return View(locations);
         }
 
-        // POST: Services/Edit/5
+        // POST: Locations/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Time,MaterialList,Description")] Services services)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Street,Neigbourhood,Number,City,State,Country,PostalCode,ServicesList")] Locations locations)
         {
-            if (id != services.ID)
+            if (id != locations.ID)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace Organizzi.Controllers
             {
                 try
                 {
-                    _context.Update(services);
+                    _context.Update(locations);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ServicesExists(services.ID))
+                    if (!LocationsExists(locations.ID))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace Organizzi.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(services);
+            return View(locations);
         }
 
-        // GET: Services/Delete/5
+        // GET: Locations/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,34 +123,34 @@ namespace Organizzi.Controllers
                 return NotFound();
             }
 
-            var services = await _context.Services
+            var locations = await _context.Locations
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (services == null)
+            if (locations == null)
             {
                 return NotFound();
             }
 
-            return View(services);
+            return View(locations);
         }
 
-        // POST: Services/Delete/5
+        // POST: Locations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var services = await _context.Services.FindAsync(id);
-            if (services != null)
+            var locations = await _context.Locations.FindAsync(id);
+            if (locations != null)
             {
-                _context.Services.Remove(services);
+                _context.Locations.Remove(locations);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ServicesExists(int id)
+        private bool LocationsExists(int id)
         {
-            return _context.Services.Any(e => e.ID == id);
+            return _context.Locations.Any(e => e.ID == id);
         }
     }
 }

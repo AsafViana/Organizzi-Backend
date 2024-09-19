@@ -35,7 +35,7 @@ Organizzi é um servidor ASP.NET que permite aos clientes divulgarem seus servi�
 
 4. **Acessar a aplicação**
 
-    Acesse a aplicação em `http://localhost:5000`.
+    Acesse a aplicação em `http://localhost:5284`.
 
 Pronto! Agora sua aplicação Organizzi deve estar rodando em um container Docker com um banco de dados SQL Server configurado.
 

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Organizzi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73413b1f421a7c918b7b0b9f7ab722cc96bc0535")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34e5acff6e1dd84116b6965c6a8d0a94adca5dcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Organizzi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Organizzi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

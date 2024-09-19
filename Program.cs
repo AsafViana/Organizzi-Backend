@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Organizzi.Controllers.DatabaseController;
+using Organizzi.Controllers;
 using Organizzi.Models;
 using System.Text;
 
@@ -11,8 +13,19 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<Context>(options =>
     options.UseSqlServer(connectionString));
 
-// Add services to the container.
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", policyBuilder =>
+    {
+        policyBuilder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
 
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
@@ -35,10 +48,11 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient<ServicesController>();
+builder.Services.AddTransient<WorkerAdmController>();
 
 var app = builder.Build();
 
@@ -49,10 +63,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseHttpsRedirection(); // Adicionar redirecionamento HTTPS
 
-app.UseAuthorization();
+app.UseRouting();
+
+app.UseCors("AllowSpecificOrigin"); // Configurar CORS
+
+app.UseAuthentication(); // Configurar autenticação
+app.UseAuthorization(); // Configurar autorização
 
 app.MapControllers();
 
-app.Run();
+app.Run("http://0.0.0.0:5284");
